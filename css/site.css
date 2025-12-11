@@ -1,0 +1,269 @@
+
+/* HERO SECTION */
+
+
+/* Root Variables */
+:root {
+    --gold: #D4A017;
+    --navy: #0f1423;
+    --light-gray: #F0F0F0;
+    --white: #ffffff;
+    --gray: #999999;
+    --light-bg: #f5f5f5;
+    --card-bg: #ffffff;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('../images/team.jpg') center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color:#D4A017;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    background: var(--gold);
+    color: #002856;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.35s ease;
+    margin: 28px 0;
+}
+
+.cta-button:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    text-align: center;
+    margin: 80px 0 60px;
+}
+
+/* GRID LAYOUT FOR SERVICES */
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.box {
+ 
+    padding: 45px 25px;
+    text-align: center;
+}
+
+
+/* ICONS INSIDE BOXES */
+.box i {
+    font-size: 3.8rem;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: block;
+    
+}
+
+/* SPECIFIC BOX STYLES */
+.house i { content: ""; }  
+.family i { content: ""; }
+.business i { content: ""; }
+.court i { content: ""; }
+.success i { content: ""; }
+.clients i { content: ""; }
+.emergency i { content: ""; }
+.shield i { content: ""; }
+
+.box h3, .box h4 {
+    font-size: 1.6rem;
+    color: var(--gold);
+    margin: 15px 0;
+    
+}
+
+.box p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* NEWS TICKER */
+.news-ticker {
+    background-color: var(--navy);
+    color: white;
+    padding: 15px 0;
+}
+
+.ticker-text {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    gap: 40px;
+   
+}
+
+.ticker-text span {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* FOOTER */
+.site-footer {
+    background: var(--light-bg);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 120px;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer strong {
+    color: var(--gold);
+}
+
+/* ARTICLES SECTION */
+.news-articles .articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    
+}
+
+.news-articles .article {
+   
+    padding: 20px;
+    
+  
+}
+
+.news-articles a {
+    text-decoration: underline;
+}
+
+
+
+.news-articles .article h3 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.news-articles .article p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .box i {
+        font-size: 3.2rem;
+    }
+
+    .box-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+
+    .site-footer {
+        padding: 40px 20px;
+    }
+
+    /* News Ticker Adjustments for Mobile */
+    .ticker-text {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    .news-articles .articles-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+/* ==============  NAV ON MOBILE – ============== */
+@media (max-width: 992px) {
+    .header-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+
+    .top-nav {
+        order: 3;
+        width: 100%;;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; 
+        padding: 5px 0;
+    }
+
+    .top-nav::-webkit-scrollbar {
+        display: none; 
+    }
+}

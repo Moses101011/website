@@ -1,0 +1,240 @@
+/* CONTACT PAGE STYLES */
+
+:root {
+    --navy: #0f1423;
+    --gold: #d4a017;
+    --dark-bg: #0a0e17;
+    --card-bg: rgba(15,20,35,0.95);
+}
+
+.container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* PAGE TITLE */
+.page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: var(--gold);
+    text-align: center;
+    margin: 60px 0 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* MAIN GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* FORM STYLES */
+.contact-form {
+    background: var(--card-bg);
+    padding: clamp(30px, 5vw, 50px);
+    border-radius: 20px;
+    border: 2px solid rgba(212,160,23,0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.req { color: #ff6b6b; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(212,160,23,0.4);
+    background: rgba(255,255,255,0.08);
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 20px rgba(212,160,23,0.4);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.radio-group label, .checkbox-group label {
+    color: #e0e0e0;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.98rem;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: var(--gold);
+    color: #002856;
+    padding: 16px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 25px;
+    transition: all 0.4s ease;
+}
+
+.submit-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(212,160,23,0.5);
+}
+
+/* CONTACT INFO CARD */
+.contact-info {
+    background: var(--card-bg);
+    padding: clamp(30px, 5vw, 45px);
+    border-radius: 20px;
+    border: 2px solid rgba(212,160,23,0.3);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.contact-info h2 {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+    color: #ddd;
+    font-size: 1.05rem;
+}
+
+.info-item i {
+    color: var(--gold);
+    font-size: 1.8rem;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.info-item a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* FOOTER */
+.site-footer {
+    background: var(--dark-bg);
+    padding: 70px 20px 40px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+    margin-top: 100px;
+    font-size: 1.1rem;
+}
+
+.site-footer strong { 
+    color: var(--gold); 
+}
+
+/* RESPONSIVE – PERFECT ON ALL DEVICES */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .contact-info {
+        position: static;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .page-title {
+        margin-top: 40px;
+    }
+    .contact-grid {
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .contact-form,
+    .contact-info {
+        padding: 25px;
+        border-radius: 16px;
+    }
+    .submit-btn {
+        padding: 18px;
+        font-size: 1.2rem;
+    }
+    .info-item {
+        font-size: 1rem;
+    }
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+

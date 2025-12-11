@@ -1,0 +1,145 @@
+
+
+/* ==================== MAIN CONTENT ==================== */
+.page-title {
+    font-family: 'Cinzel', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    text-align: center;
+    margin: 80px 0 60px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    white-space: nowrap;
+}
+
+.highlight { color: var(--gold); font-weight: bold; }
+.closing-line { font-size: 1.3rem; color: var(--gold); font-weight: 600; text-align: center; }
+
+/* Founding Story */
+.founding-story {
+
+    margin: 60px 0;
+    text-align: center;
+}
+
+.founding-story h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.8rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+}
+
+.founding-story p {
+    font-size: 1.25rem;
+    max-width: 1000px;
+    margin: 0 auto 25px;
+}
+
+/* Mission / Vision / Values */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.mv-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(100deg, rgba(5, 3, 26, 0.1), rgba(10,14,23,0.85));
+}
+
+.mv-card:hover { transform: translateY(-10px); }
+
+.mv-card h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mv-card h2 i { font-size: 2rem; }
+
+.values-list {
+    list-style: none;
+    font-size: 1.15rem;
+    color: #ccc;
+}
+
+.values-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+}
+
+.values-list li:last-child { border-bottom: none; }
+.values-list strong { color: var(--gold); }
+
+/* Footer */
+.site-footer {
+    background: var(--light-bg);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 120px;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer p { font-size: 1.1rem; color: #888; }
+.site-footer strong { color: var(--gold); }
+.site-footer span { font-size: 0.9rem; display: block; margin-top: 8px; }
+
+/* ==================== MOBILE RESPONSIVENESS ==================== */
+@media (max-width: 768px) {
+
+    .page-title {
+        font-size: 2rem;
+        margin: 50px 0 40px;
+        white-space: normal; 
+    }
+
+    .founding-story h2 {
+        font-size: 2.2rem;
+    }
+
+    .founding-story p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 50px 0;
+    }
+
+    .mv-card {
+        padding: 25px 15px;
+    }
+
+    .mv-card h2 {
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+
+    .mv-card h2 i {
+        font-size: 1.6rem;
+    }
+
+    .values-list {
+        font-size: 1rem;
+    }
+
+    .site-footer {
+        padding: 40px 15px;
+        margin-top: 80px;
+    }
+
+    .site-footer p {
+        font-size: 1rem;
+    }
+
+    .site-footer span {
+        font-size: 0.85rem;
+    }
+}

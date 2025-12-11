@@ -1,0 +1,280 @@
+:root {
+    --navy: #003087;
+    --gold: #d4a017;
+    --white: #ffffff;
+    --light-bg: #0a0e17;
+    --card-bg: rgba(15, 20, 35, 0.95);
+    --radius: 20px;
+    --transition: all 0.35s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 100%);
+    color: #e0e0e0;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====================== HEADER ====================== */
+.site-header {
+    background: linear-gradient(to right, var(--navy), #16213e);
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    object-fit: contain;
+}
+
+.banner-text h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tagline {
+    color: var(--white);
+    font-style: italic;
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+}
+
+/* ====================== MAIN CONTENT ====================== */
+.page-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin: 20px 0;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Founding Story */
+.founding-story {
+    padding: 20px 40px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.founding-story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.founding-story p {
+    font-size: 1.25rem;
+    max-width: 1000px;
+    margin: 0 auto 25px;
+}
+
+.highlight { color: var(--gold); font-weight: bold; }
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    border: 2px solid rgba(212,160,23,0.3);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.9);
+}
+
+.team-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.expertise {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.icons i {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin: 15px 10px 0;
+}
+
+
+/* Video Testimonials Section */
+.video-testimonials {
+    text-align: center;
+    margin: 100px 0;
+    padding: 60px 20px;
+    border-radius: var(--radius, 12px); /* fallback added */
+    border: 2px solid rgba(212,160,23,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    background: var(--card-bg, #0f1423); /* fallback added */
+    
+}
+
+video{
+      width: 1000%;
+  max-width: 500px;
+  height: auto;
+}
+
+.video-testimonials h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.testimonial-intro {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #ddd;
+}
+
+/* --- Video Wrapper --- */
+.video-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg, #0f1423); 
+    border-radius: var(--radius, 12px); 
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    border: 2px solid rgba(212,160,23,0.3);
+}
+
+/* --- Video Element --- */
+.client-video{
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+    border-radius: inherit;
+}
+
+/* --- Video Title --- */
+.video-title {
+    padding: 20px;
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.2);
+
+}
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 768px) {
+    .video-testimonials {
+        margin: 60px 0;
+        padding: 40px 20px;
+    }
+
+    .video-testimonials h2 {
+        font-size: 2.2rem;
+    }
+
+    .testimonial-intro {
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+    }
+
+    .client-video {
+        height: 240px; /* Prevent tall stretching on mobile */
+    }
+
+    .video-title {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+/* ====================== FOOTER ====================== */
+.site-footer {
+    background: var(--light-bg, #f0f0f0); /* fallback */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 120px;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.site-footer strong { 
+    color: var(--gold); 
+}
+
+.site-footer span { 
+    font-size: 0.95rem; 
+    display: block; 
+    margin-top: 10px; 
+    color: #666;
+}

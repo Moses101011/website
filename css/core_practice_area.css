@@ -1,0 +1,96 @@
+/* Root Variables */
+:root {
+    --gold: #D4A017;
+    --navy: #0f1423;
+    --light-gray: #F0F0F0;
+    --white: #ffffff;
+    --gray: #999999;
+    --light-bg: #f5f5f5;
+    --card-bg: #ffffff;
+}
+
+/* GLOBAL HEADER STYLES */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navy);
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--gold);
+}
+
+/* HEADER */
+.site-header {
+    background-color: var(--navy);
+    padding: 20px;
+    color: white;
+}
+
+.site-header .brand-link {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .logo-img {
+    max-width: 60px;
+    margin-right: 15px;
+}
+
+.site-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+}
+
+/* SERVICE DETAILS */
+.service-details {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-details h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.service-details p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOOTER */
+.site-footer {
+    background: var(--light-bg);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer p {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .service-details h2 {
+        font-size: 2.5rem;
+    }
+
+    .service-details p {
+        font-size: 1rem;
+    }
+}
